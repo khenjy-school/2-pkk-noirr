@@ -1,5 +1,5 @@
 <?php
-
+defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  *  
  */
@@ -9,99 +9,94 @@ class Main extends CI_Controller
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->model('MemberMdl');
 		$this->load->helper('url');
 	}
 
-	public function tambah_member()
+	public function tampil_admin_merch()
 	{
-		//tampung data di array
-		$data = array(
-			'id_mb' => '';	//tambah id otomatis di database
-			'name_mb' => $this->input->post(''),
-			'email' => $this->input->post(''),
-			'password' => $this->input->post(''),
-			'telp' => $this->input->post('')
-		);
-
-		$this->MemberMdl->add_member($data);
-		$this->MemberMdl->jmlh_member($data);
+		$this->load->view('template/headeradm');
+		$this->load->view('admin/admin');
+		$this->load->view('table/tablemerch', $data)
+		$this->load->view('template/footeradm');
 	}
 
+	public function tampil_admin_member()
+	{
+		$this->load->view('template/headeradm');
+		$this->load->view('admin/admin');
+		$this->load->view('table/tablemember', $data)
+		$this->load->view('template/footeradm');
+	}
+
+	public function tampil_admin_bill()
+	{
+		$this->load->view('template/headeradm');
+		$this->load->view('admin/admin');
+		$this->load->view('table/tablebill', $data)
+		$this->load->view('template/footeradm');
+	}
+
+	public function tampil_index()
+	{
+		$this->load->view('template/header');
+		$this->load->view('public/index');
+		$this->load->view('template/footer');
+	}
+
+
+	public function tampil_about()
+	{
+		$this->load->view('template/header');
+		$this->load->view('public/about');
+		$this->load->view('template/footer');
+	}
+
+	public function tampil_error()
+	{
+		$this->load->view('template/header');
+		$this->load->view('public/error');
+		$this->load->view('template/footer');
+	}
+
+	public function tampil_signup()
+	{
+		$this->load->view('template/header');
+		$this->load->view('public/signup');
+		$this->load->view('template/footer');
+	}
+
+	public function tampil_login()
+	{
+		$this->load->view('template/header');
+		$this->load->view('public/login');
+		$this->load->view('template/footer');
+	}
+	
 	public function tampil_member()
 	{
-
+		$this->load->view('template/header');
+		$this->load->view('public/member');
+		$this->load->view('template/footer');
 	}
 
-	public function masuk_member()
+	public function tampil_merch()
 	{
-		//tampung data di array
-		$data = array(
-			'id_mb' = '',	//tambah id otomatis di database
-			'email' => $this->input->post(''),
-			'password' => $this->input->post('')
-		);
-
-		$this->MemberMdl->cek_member($data);
+		$this->load->view('template/header');
+		$this->load->view('public/merch');
+		$this->load->view('template/footer');
 	}
 
-	public function update_member()
+	public function tampil_checkout()
 	{
-		$data = array(
-
-		);
-
-		$this->EditorMdl->jmlh_viewer($data);
+		$this->load->view('template/header');
+		$this->load->view('member/checkout');
+		$this->load->view('template/footer');
 	}
 
-	public function hapus_member($id_member)	//menghapus member
+	public function tampil_payoutput()
 	{
-		$where = array('id_member' => $id_member);
-		$this->MemberMdl->hapus_member($where, 'member');
-		redirect('main/index');
+		$this->load->view('template/header');
+		$this->load->view('member/payoutput');
+		$this->load->view('template/footer');
 	}
-
-
-
-	public function tambah_produk()
-	{
-		//tampung data di array
-		$data = array(
-			'id_blog' = '',	//tambah id otomatis di database
-			'judul' => $this->input->post(''),
-			'nama' => $this->input->post('')
-		);
-
-		$this->BlogMdl->add_blog($data);
-		$this->EditorMdl->jmlh_blog($data);
-	}
-
-	public function tampil_produk()
-	{
-		
-	}
-
-	public function bayar_produk()
-	{
-		$data = array(
-			'id_komentar' = '',	//tambah id otomatis di database
-			'nama' => $this->input->post(''),
-			'email' => $this->input->post(''),
-			'isi' => $this->input->post(''),
-		);
-
-		$this->KomentarMdl->add_komentar($data);
-		$this->EditorMdl->jmlh_komentar($data);
-	}
-
-	public function update_produk()
-	{
-
-	}
-
-	public function hapus_produk()
-	{
-
-	}
-
 }
