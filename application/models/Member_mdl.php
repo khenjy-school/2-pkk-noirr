@@ -8,53 +8,44 @@ class Member_mdl extends CI_Model
 	//Berfungsi untuk mengambil data hasil query
 	public function getALl()
 	{
-		return $this->db->get($this->_table)>result();
+		return $this->db->get($this->table)>result();
 	}
 
 	//Berfungsi untuk mengambil satu data dari hasil query
 	public function getById($id)
 	{
-		return $this->db->get_where($this->_table, ["id_member" => $id])->row();
+		return $this->db->get_where($this->table, ["id_mb" => $id])->row();
 	}
 
 	//Berfungsi untuk menghitung jumlah member
-	public function jmlh_editor($value='')	//untuk menghitung jumlah editor di halaman admin
+	public function jmlh_member($value='')
 	{
-		$this->db->count('id_editor', $data)
+		$this->db->count('id_mb', $data)
 	}
 
-
-	//Berfungsi untuk menambah editor
-	public function create_editor()	//untuk menambahkan editor halaman buat akun
-	{
-
-	}
-
-
-	//Berfungsi untuk mengedit editor
-	public function edit_editor()	//untuk halaman admin (edit)
+	//Berfungsi untuk melakukan konfirmasi data
+	public function login()
 	{
 
 	}
 
-	//Berfungsi untuk menghapus data editor
-	public function del_editor($id)	//untuk halaman admin
+	//Berfungsi untuk menambah member
+	public function save()
 	{
-		$this->db->where('id' $id);
-		$this->db->delete('editor');
+		return $this->db->insert('member', $data);
 	}
 
-
-	//Berfungsi untuk me
-	public function save_editor()	//untuk halaman admin (edit)
+	//Berfungsi untuk mengedit member
+	public function update()
 	{
-		$data = array(
-			'nama' => $nama,
-			'password' => $password,
-			'tglgabung' => $tglgabung
-		);
-		$this->db->where('id', $id);
-		$this->db->update('editor', $data);
+
+	}
+
+	//Berfungsi untuk menghapus data member
+	public function delete($id)
+	{
+		$this->db->where('id_mb' $id);
+		$this->db->delete('member');
 	}
 }
 ?>

@@ -14,11 +14,11 @@ class Merch extends CI_Controller
 	}
 
 	//Berfungsi untuk menambah produk
-	public function tambah_produk()
+	public function tambah()
 	{
 		//tampung data di array
 		$data = array(
-			'id_blog' = '',	//tambah id otomatis di database
+			'id_blog' = '',
 			'judul' => $this->input->post(''),
 			'nama' => $this->input->post('')
 		);
@@ -42,7 +42,7 @@ class Merch extends CI_Controller
 	//Berfungsi untuk menghapus merch melalui
 	public function delete()
 	{
-
+		$this->Merch_mdl->delete()
 	}
 }
 

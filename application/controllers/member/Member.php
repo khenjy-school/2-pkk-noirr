@@ -16,39 +16,36 @@ class Member extends CI_Controller
 	//Berfungsi untuk menambah member melalui form pada halaman signup
 	public function signup()
 	{
-		//tampung data di array
 		$data = array(
-			'id_mb' => '';	//tambah id otomatis di database
+			'id_mb' => '';
 			'name_mb' => $this->input->post(''),
 			'email' => $this->input->post(''),
 			'password' => $this->input->post(''),
 			'telp' => $this->input->post('')
 		);
 
-		$this->MemberMdl->add_member($data);
-		$this->MemberMdl->jmlh_member($data);
+		$this->Member_mdl->save($data);
+		$this->Member_mdl->jmlh_member($data);
 	}
 
 
 	//Berfungsi untuk login
 	public function login()
 	{
-		//tampung data di array
 		$data = array(
-			'id_mb' = '',	//tambah id otomatis di database
+			'id_mb' = '',
 			'email' => $this->input->post(''),
 			'password' => $this->input->post('')
 		);
 
-		$this->MemberMdl->cek_member($data);
+		$this->Member_mdl->cek_member($data);
 	}
 
-	//Berfungsi untuk
-	public function tambah_member()
+	//Berfungsi untuk menambah member baru ke tabel  member
+	public function tambah()
 	{
-		//tampung data di array
 		$data = array(
-			'id_mb' => '';	//tambah id otomatis di database
+			'id_mb' => '';
 			'name_mb' => $this->input->post(''),
 			'email' => $this->input->post(''),
 			'password' => $this->input->post(''),
@@ -59,18 +56,14 @@ class Member extends CI_Controller
 		$this->MemberMdl->jmlh_member($data);
 	}
 
-	//Berfungsi untuk
+	//Berfungsi untuk melakukan update data tabel member melalui form pada halaman admin maupun form pada pengaturan akun di halaman utama member 
 	public function update_member()
 	{
-		$data = array(
-
-		);
-
-		$this->EditorMdl->jmlh_viewer($data);
+		
 	}
 
-	//Berfungsi untuk
-	public function hapus_member($id_member)	//menghapus member
+	//Berfungsi untuk menghapus member
+	public function hapus_member($id_member)
 	{
 		$where = array('id_member' => $id_member);
 		$this->MemberMdl->hapus_member($where, 'member');
