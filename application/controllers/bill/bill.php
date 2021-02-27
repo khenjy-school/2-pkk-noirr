@@ -3,55 +3,43 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  *  
  */
-class Main extends CI_Controller
+class Bill extends CI_Controller
 {
 	
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->model('MemberMdl');
+		$this->load->model('Bill_mdl');
 		$this->load->helper('url');
 	}
 
-	public function getAll()
-	{
-		
-	}
-
-	public function getById()
-	{
-		
-	}
-
+	//Berfungsi untuk menambahkan data bill
 	public function tambah()
 	{
 
 	}
 
+	//Berfungsi untuk mengedit data bill
 	public function edit()
 	{
 
 	}
 
+	//Berfungsi untuk mengupdate bill
 	public function update()
 	{
 
 	}
 
+	//Berfungsi untuk menghapus data pada tabel bill 
 	public function delete()
 	{
-		
+			
 	}
 
-	public function bayar_produk()
+	//Berfungsi untuk menambahkan
+	public function tambah()
 	{
-		$data = array(
-			'id' = '',	//tambah id otomatis di database
-			'nama' => $this->input->post(''),
-			'email' => $this->input->post(''),
-			'isi' => $this->input->post(''),
-		);
-
-		$this->Bill_mdl->add_komentar($data);
+		
 	}
 }

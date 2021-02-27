@@ -12,11 +12,21 @@ class Main extends CI_Controller
 		$this->load->helper('url');
 	}
 
-	public function tampil_admin_merch()
+	public function tampil_admin()
 	{
 		$this->load->view('template/headeradm');
 		$this->load->view('admin/admin');
-		$this->load->view('table/tablemerch', $data)
+		$this->load->view('admin/data/data_merchsold', $data);
+		$this->load->view('admin/data/data_subscriber', $data);
+		$this->load->view('template/footeradm');
+	}
+
+	public function tampil_admin_merch()
+	{
+		$data['judul'] = 'Admin Merch';
+		$this->load->view('template/headeradm');
+		$this->load->view('admin/admin');
+		$this->load->view('admin/data/tablemerch', $data)
 		$this->load->view('template/footeradm');
 	}
 
@@ -24,7 +34,7 @@ class Main extends CI_Controller
 	{
 		$this->load->view('template/headeradm');
 		$this->load->view('admin/admin');
-		$this->load->view('table/tablemember', $data)
+		$this->load->view('admin/data/tablemember', $data)
 		$this->load->view('template/footeradm');
 	}
 
@@ -32,7 +42,7 @@ class Main extends CI_Controller
 	{
 		$this->load->view('template/headeradm');
 		$this->load->view('admin/admin');
-		$this->load->view('table/tablebill', $data)
+		$this->load->view('admin/data/tablebill', $data)
 		$this->load->view('template/footeradm');
 	}
 

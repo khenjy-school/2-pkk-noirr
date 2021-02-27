@@ -3,13 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  *  
  */
-class Main extends CI_Controller
+class Member extends CI_Controller
 {
 	
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->model('MemberMdl');
+		$this->load->model('Member_mdl');
 		$this->load->helper('url');
 	}
 
@@ -43,16 +43,7 @@ class Main extends CI_Controller
 		$this->MemberMdl->cek_member($data);
 	}
 
-	public function getAll()
-	{
-
-	}
-
-	public function getById()
-	{
-		
-	}
-
+	//Berfungsi untuk
 	public function tambah_member()
 	{
 		//tampung data di array
@@ -68,6 +59,7 @@ class Main extends CI_Controller
 		$this->MemberMdl->jmlh_member($data);
 	}
 
+	//Berfungsi untuk
 	public function update_member()
 	{
 		$data = array(
@@ -77,6 +69,7 @@ class Main extends CI_Controller
 		$this->EditorMdl->jmlh_viewer($data);
 	}
 
+	//Berfungsi untuk
 	public function hapus_member($id_member)	//menghapus member
 	{
 		$where = array('id_member' => $id_member);
