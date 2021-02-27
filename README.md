@@ -31,13 +31,30 @@ Berisi gambar-gambar berekstensi jpg atau png
 
 controllers
 -------------
-Admin
-terdiri dari Memberadm.php
+Daftar Folder :
+1. admin
+	* Memberadm.php
+	* Productadm.php
+2. bill
+	* Bill.php
+	* Checkout.php
+3. member
+	* Member.php
+4. merch
+	* Merch.php
+	
+Daftar File : 
+1. Main.php
+2. Welcome.php
 
-## Model
+model
+---------
+1. Bill_mdl.php
+2. Member_mdl.php
+3. Merch_mdl.php
 
-
-## Views
+views
+---------
 ### Admin
 
 ### Member
@@ -45,19 +62,19 @@ terdiri dari Memberadm.php
 ### Public
 Berisi file
 
-#### Daftar Folder
-** Form
+Daftar Folder
+1. Form
 Berisi form-form yang digunakan pada file-file yang menggunakan form.
 
-#### Daftar File
-** 
+Daftar File
+1.  
 
 ### Template
 Berisi file-file yang digunakan sebagai fitur di dalam website.
 
 |admin          |bill        |member       |merch    |Main   |
 | ------------- |------------| ----------- | ------- | ----- | 
-|Memberadm.php  |Bill.php    |Member.php   |Merch.php|       |
-| ------------- |----------- | ----------- |-------- | ----- |
+| Memberadm.php |Bill.php    |Member.php   |Merch.php|       |
+| ||||  |
 |Productadm.php |Checkout.php|             |e|r|
 
