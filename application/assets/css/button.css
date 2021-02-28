@@ -1,0 +1,39 @@
+.btnnormal{
+	position: absolute;
+	width: 163px;
+	height: 50px;
+	left: 927px;
+	top: 39px;
+	background-color: 000000;
+	color: FFFFFF;
+}
+
+.btndanger{
+	position: absolute;
+	width: 163px;
+	height: 50px;
+	left: 927px;
+	top: 39px;
+	background-color: F05454;
+	color: FFFFFF;
+}
+
+.btncancel{
+	position: absolute;
+	width: 163px;
+	height: 50px;
+	left: 927px;
+	top: 39px;
+	background-color: 606060;
+	color: FFFFFF;
+}
+
+.btnpassive{
+	position: absolute;
+	width: 163px;
+	height: 50px;
+	left: 927px;
+	top: 39px;
+	background-color: 606060;
+	color: DDDDDD;
+}
