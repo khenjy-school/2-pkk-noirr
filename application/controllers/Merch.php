@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Merch extends CI_Controller
 {
 	
-	function __construct(argument)
+	function __construct()
 	{
 		parent::__construct();
 		$this->load->model('Merch_mdl');
@@ -18,7 +18,7 @@ class Merch extends CI_Controller
 	{
 		//tampung data di array
 		$data = array(
-			'id_blog' = '',
+			'id_blog' => '',
 			'judul' => $this->input->post(''),
 			'nama' => $this->input->post('')
 		);
@@ -42,7 +42,7 @@ class Merch extends CI_Controller
 	//Berfungsi untuk menghapus merch melalui
 	public function delete()
 	{
-		$this->Merch_mdl->delete()
+		$this->Merch_mdl->delete();
 	}
 }
 
