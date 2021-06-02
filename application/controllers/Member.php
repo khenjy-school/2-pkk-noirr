@@ -17,7 +17,7 @@ class Member extends CI_Controller
 	public function signup()
 	{
 		$data = array(
-			'id_mb' => '';
+			'id_mb' => '',
 			'name_mb' => $this->input->post(''),
 			'email' => $this->input->post(''),
 			'password' => $this->input->post(''),
@@ -33,7 +33,7 @@ class Member extends CI_Controller
 	public function login()
 	{
 		$data = array(
-			'id_mb' = '',
+			'id_mb' => '',
 			'email' => $this->input->post(''),
 			'password' => $this->input->post('')
 		);
@@ -45,7 +45,7 @@ class Member extends CI_Controller
 	public function tambah()
 	{
 		$data = array(
-			'id_mb' => '';
+			'id_mb' => '',
 			'name_mb' => $this->input->post(''),
 			'email' => $this->input->post(''),
 			'password' => $this->input->post(''),

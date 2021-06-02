@@ -16,21 +16,19 @@ class Bill extends CI_Controller
 	//Berfungsi untuk menambahkan ke data salary
 	public function buy()
 	{
-		$data = array(
-
-		)
+		
 	}
 
 	//Berfungsi untuk membatalkan dari data salary
 	public function cancel()
 	{
-		redirect('main/tampil', 'refresh')
+		redirect('main/tampil', 'refresh');
 	}
 
 	//Berfungsi untuk mengedit data bill
 	public function back()
 	{
-		redirect('main/tampil_member')
+		redirect('main/tampil_member');
 	}
 
 	public function home()

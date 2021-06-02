@@ -20,7 +20,7 @@ class Member_mdl extends CI_Model
 	//Berfungsi untuk menghitung jumlah member
 	public function jmlh_member($value='')
 	{
-		$this->db->count('id_mb', $data)
+		$this->db->count('id_mb', $data);
 	}
 
 	//Berfungsi untuk melakukan konfirmasi data
@@ -44,7 +44,7 @@ class Member_mdl extends CI_Model
 	//Berfungsi untuk menghapus data member
 	public function delete($id)
 	{
-		$this->db->where('id_mb' $id);
+		$this->db->where('id_mb', $id);
 		$this->db->delete('member');
 	}
 }

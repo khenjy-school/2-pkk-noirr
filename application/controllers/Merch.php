@@ -23,7 +23,7 @@ class Merch extends CI_Controller
 			'nama' => $this->input->post('')
 		);
 		$this->Merch_mdl->tambah_merch($data);
-		redirect('main/tampil_admin_merch', $data)
+		redirect('main/tampil_admin_merch', $data);
 	}
 
 	//Berfungsi untuk mengedit merch melalui

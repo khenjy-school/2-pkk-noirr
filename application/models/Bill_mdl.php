@@ -32,7 +32,7 @@ class Bill_mdl extends CI_Model
 	//Berfungsi untuk menghapus bill melalui halaman admin bagian bill
 	public function delete()
 	{
-		$this->db->where('id_bill' $id);
+		$this->db->where('id_bill', $id);
 		$this->db->delete('bill');
 	}
 }

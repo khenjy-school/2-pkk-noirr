@@ -38,7 +38,7 @@ class Merch_mdl extends CI_Model
 	//Berfungsi untuk menghapus merch melalui halaman admin bagian merch
 	public function delete()
 	{
-		$this->db->where('id_pd' $id);
+		$this->db->where('id_pd', $id);
 		$this->db->delete('merch');
 	}
 }
